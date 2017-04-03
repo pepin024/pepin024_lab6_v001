@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=pepin024_lab6_LCD_v001.c pepin024_lab6_DELAY_v001.s pepin024_lab6_DELAYB_v001.c main_v0001.c
+SOURCEFILES_QUOTED_IF_SPACED=pepin024_lab6_LCD_v001.c pepin024_lab6_DELAY_v001.s pepin024_lab6_DELAYB_v001.c main_v0001.c pepin024_lab6_analog_v001.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/pepin024_lab6_LCD_v001.o ${OBJECTDIR}/pepin024_lab6_DELAY_v001.o ${OBJECTDIR}/pepin024_lab6_DELAYB_v001.o ${OBJECTDIR}/main_v0001.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/pepin024_lab6_LCD_v001.o.d ${OBJECTDIR}/pepin024_lab6_DELAY_v001.o.d ${OBJECTDIR}/pepin024_lab6_DELAYB_v001.o.d ${OBJECTDIR}/main_v0001.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/pepin024_lab6_LCD_v001.o ${OBJECTDIR}/pepin024_lab6_DELAY_v001.o ${OBJECTDIR}/pepin024_lab6_DELAYB_v001.o ${OBJECTDIR}/main_v0001.o ${OBJECTDIR}/pepin024_lab6_analog_v001.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/pepin024_lab6_LCD_v001.o.d ${OBJECTDIR}/pepin024_lab6_DELAY_v001.o.d ${OBJECTDIR}/pepin024_lab6_DELAYB_v001.o.d ${OBJECTDIR}/main_v0001.o.d ${OBJECTDIR}/pepin024_lab6_analog_v001.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/pepin024_lab6_LCD_v001.o ${OBJECTDIR}/pepin024_lab6_DELAY_v001.o ${OBJECTDIR}/pepin024_lab6_DELAYB_v001.o ${OBJECTDIR}/main_v0001.o
+OBJECTFILES=${OBJECTDIR}/pepin024_lab6_LCD_v001.o ${OBJECTDIR}/pepin024_lab6_DELAY_v001.o ${OBJECTDIR}/pepin024_lab6_DELAYB_v001.o ${OBJECTDIR}/main_v0001.o ${OBJECTDIR}/pepin024_lab6_analog_v001.o
 
 # Source Files
-SOURCEFILES=pepin024_lab6_LCD_v001.c pepin024_lab6_DELAY_v001.s pepin024_lab6_DELAYB_v001.c main_v0001.c
+SOURCEFILES=pepin024_lab6_LCD_v001.c pepin024_lab6_DELAY_v001.s pepin024_lab6_DELAYB_v001.c main_v0001.c pepin024_lab6_analog_v001.c
 
 
 CFLAGS=
@@ -109,6 +109,13 @@ ${OBJECTDIR}/main_v0001.o: main_v0001.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  main_v0001.c  -o ${OBJECTDIR}/main_v0001.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main_v0001.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/main_v0001.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/pepin024_lab6_analog_v001.o: pepin024_lab6_analog_v001.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/pepin024_lab6_analog_v001.o.d 
+	@${RM} ${OBJECTDIR}/pepin024_lab6_analog_v001.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  pepin024_lab6_analog_v001.c  -o ${OBJECTDIR}/pepin024_lab6_analog_v001.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/pepin024_lab6_analog_v001.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/pepin024_lab6_analog_v001.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/pepin024_lab6_LCD_v001.o: pepin024_lab6_LCD_v001.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -130,6 +137,13 @@ ${OBJECTDIR}/main_v0001.o: main_v0001.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/main_v0001.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  main_v0001.c  -o ${OBJECTDIR}/main_v0001.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main_v0001.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/main_v0001.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/pepin024_lab6_analog_v001.o: pepin024_lab6_analog_v001.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/pepin024_lab6_analog_v001.o.d 
+	@${RM} ${OBJECTDIR}/pepin024_lab6_analog_v001.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  pepin024_lab6_analog_v001.c  -o ${OBJECTDIR}/pepin024_lab6_analog_v001.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/pepin024_lab6_analog_v001.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/pepin024_lab6_analog_v001.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

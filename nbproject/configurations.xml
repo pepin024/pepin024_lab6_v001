@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>pepin024_lab6_DELAY_v001.h</itemPath>
       <itemPath>pepin024_lab6_LCD_v001.h</itemPath>
+      <itemPath>pepin024_lab6_ANALOG_v001.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,6 +19,7 @@
       <itemPath>pepin024_lab6_DELAY_v001.s</itemPath>
       <itemPath>pepin024_lab6_DELAYB_v001.c</itemPath>
       <itemPath>main_v0001.c</itemPath>
+      <itemPath>pepin024_lab6_analog_v001.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -193,6 +195,7 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>

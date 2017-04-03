@@ -1,8 +1,11 @@
 
 #include <p24Fxxxx.h>
 #include <xc.h>
+#include <stdio.h>
 #include "pepin024_lab6_DELAY_v001.h"
 #include "pepin024_lab6_LCD_v001.h"
+#include "pepin024_lab6_ANALOG_v001.h"
+
 
 // PIC24FJ64GA002 Configuration Bit Settings
 // CW1: FLASH CONFIGURATION WORD 1 (see PIC24 Family Reference Manual 24.1)
@@ -28,13 +31,21 @@ char test[] = "^( ^.^ )^  (> ^.^)>  ^( ^.^ )^  <(^.^ <)  v( ^.^ )v  ";
 void setup(void) {
     CLKDIVbits.RCDIV = 0;
     lcd_init();
-    lcd_printStrB(test, 0);
+    analog_init();
+    //lcd_printStrB(test, 0);
     return;
 }
 
 void loop(void) {
+    char adStr[20];
+    int adValue;
+    
+    adValue = getBuffer();
+    sprintf(adStr, "%6.4f V", (3.3/1024)*adValue);
+    
+    lcd_printStrB(adStr, 0);
     wait(500);
-    lcd_cmd(0b00011000); //Shifts the display to the left
+
     return;
 }
 
