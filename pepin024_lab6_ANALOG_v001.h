@@ -13,7 +13,8 @@ extern "C" {
 #endif
 
 void analog_init(void);
-int getBuffer(void);
+//int getBuffer(void);
+int getBuffer(int i);
 
 
 #ifdef	__cplusplus

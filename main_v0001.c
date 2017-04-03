@@ -40,7 +40,7 @@ void loop(void) {
     char adStr[20];
     int adValue;
     
-    adValue = getBuffer();
+    adValue = getBuffer(0);
     sprintf(adStr, "%6.4f V", (3.3/1024)*adValue);
     
     lcd_printStrB(adStr, 0);
